@@ -10,6 +10,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 ### zsh ###
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+### brew ###
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 ### Go ###
 export GOPATH="$XDG_DATA_HOME/go"
 export GO111MODULE="on"
