@@ -1,8 +1,16 @@
 tap "homebrew/cask"
 
+brew "awscli"
 brew "ghq"
+brew "jq"
+brew "peco"
+brew "tmux"
+brew "watch"
 brew "wget"
 
+cask "docker"
 cask "hammerspoon"
+cask "slack"
 cask "visual-studio-code"
 cask "wezterm"
+cask "zoom"
