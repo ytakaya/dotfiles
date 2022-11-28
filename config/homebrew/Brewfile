@@ -5,3 +5,4 @@ brew "wget"
 
 cask "hammerspoon"
 cask "visual-studio-code"
+cask "wezterm"
