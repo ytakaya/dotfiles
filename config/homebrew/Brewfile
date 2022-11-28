@@ -4,3 +4,4 @@ brew "ghq"
 brew "wget"
 
 cask "hammerspoon"
+cask "visual-studio-code"
