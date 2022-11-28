@@ -2,3 +2,5 @@ tap "homebrew/cask"
 
 brew "ghq"
 brew "wget"
+
+cask "hammerspoon"
