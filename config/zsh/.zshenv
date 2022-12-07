@@ -16,3 +16,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ### Go ###
 export GOPATH="$XDG_DATA_HOME/go"
 export GO111MODULE="on"
+
+### JAVA ###
+export JAVA_HOME="$XDG_DATA_HOME/java/temurin-17.jdk/Contents/Home"
