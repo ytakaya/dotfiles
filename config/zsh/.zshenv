@@ -23,4 +23,3 @@ export JAVA_HOME="$XDG_DATA_HOME/java/temurin-17.jdk/Contents/Home"
 ### NODE ###
 export NVM_DIR="$XDG_DATA_HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
