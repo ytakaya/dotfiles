@@ -18,8 +18,11 @@ export GOPATH="$XDG_DATA_HOME/go"
 export GO111MODULE="on"
 
 ### JAVA ###
-export JAVA_HOME="$XDG_DATA_HOME/java/temurin-17.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-java19-22.3.1/Contents/Home"
 
 ### NODE ###
 export NVM_DIR="$XDG_DATA_HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+
+### ruby ###
+eval "$(rbenv init - zsh)"

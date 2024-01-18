@@ -17,6 +17,7 @@ typeset -U fpath
 
 path=(
     "$HOME/.local/bin"(N-/)
+    "$HOME/.local/share/flutter/bin"(N-/)
     "$GOPATH/bin"(N-/)
     "$JAVA_HOME/bin"(N-/)
     "$XDG_CONFIG_HOME/scripts/bin"(N-/)
@@ -63,3 +64,9 @@ zinit light romkatv/powerlevel10k
 zinit wait lucid null for \
     atinit'source "$ZDOTDIR/.zshrc.lazy"' \
     @'zdharma-continuum/null'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ytakaya/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ytakaya/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ytakaya/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ytakaya/google-cloud-sdk/completion.zsh.inc'; fi
