@@ -17,12 +17,15 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export GOPATH="$XDG_DATA_HOME/go"
 export GO111MODULE="on"
 
-### JAVA ###
+### Java ###
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-java19-22.3.1/Contents/Home"
 
-### NODE ###
+### Node ###
 export NVM_DIR="$XDG_DATA_HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 
 ### ruby ###
 eval "$(rbenv init - zsh)"
+
+### Rust ###
+. "$HOME/.cargo/env"
