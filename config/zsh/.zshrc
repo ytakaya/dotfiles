@@ -63,6 +63,7 @@ zinit light romkatv/powerlevel10k
 ### plugins ###
 zinit wait lucid null for \
     atinit'source "$ZDOTDIR/.zshrc.lazy"' \
+    atinit'source "$ZDOTDIR/.zshrc.fzf.lazy"' \
     @'zdharma-continuum/null'
 
 # The next line updates PATH for the Google Cloud SDK.

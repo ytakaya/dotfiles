@@ -1,0 +1,10 @@
+function cdrepo () {
+    local repodir=$(ghq list | fzf -1)
+    if [ -n "$repodir" ]; then
+        BUFFER="cd $(ghq root)/$repodir"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N cdrepo
+bindkey '^s' cdrepo
