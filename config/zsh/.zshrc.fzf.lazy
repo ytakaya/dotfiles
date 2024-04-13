@@ -8,3 +8,15 @@ function cdrepo () {
 }
 zle -N cdrepo
 bindkey '^s' cdrepo
+
+function insert-git-branch() {
+    local branches branch
+    branches=$(git branch --all | sed 's/.* //' | sed 's/.*?\///' | sort -u)
+    branch=$(echo "$branches" | fzf)
+
+    if [ -n "$branch" ]; then
+        LBUFFER+="$branch"
+    fi
+}
+zle -N insert-git-branch
+bindkey '^b' insert-git-branch
