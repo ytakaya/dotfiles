@@ -10,7 +10,6 @@ brew "watch"
 brew "wget"
 
 brew "docker"
-brew "hammerspoon"
 brew "slack"
 brew "visual-studio-code"
 brew "wezterm"
