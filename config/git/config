@@ -1,2 +1,5 @@
 [include]
     path = conf.d/ghq.conf
+[user]
+	name = Yamazoe Takaya
+	email = yamazoe.takaya@enechain.co.jp

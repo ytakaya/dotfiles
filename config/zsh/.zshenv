@@ -9,6 +9,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 ### zsh ###
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export SHELL_SESSIONS_DISABLE=1
 
 ### brew ###
 eval "$(/opt/homebrew/bin/brew shellenv)"

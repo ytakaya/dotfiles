@@ -6,10 +6,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ### zinit ###
-typeset -gAH ZINIT
-ZINIT[HOME_DIR]="$XDG_DATA_HOME/zinit"
-ZINIT[ZCOMPDUMP_PATH]="$XDG_STATE_HOME/zcompdump"
-source "${ZINIT[HOME_DIR]}/bin/zinit.zsh"
+# typeset -gAH ZINIT
+# ZINIT[HOME_DIR]="$XDG_DATA_HOME/zinit"
+# ZINIT[ZCOMPDUMP_PATH]="$XDG_STATE_HOME/zcompdump"
+# source "${ZINIT[HOME_DIR]}/bin/zinit.zsh"
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
 ### paths ###
 typeset -U path
@@ -21,6 +25,7 @@ path=(
     "$GOPATH/bin"(N-/)
     "$JAVA_HOME/bin"(N-/)
     "$XDG_CONFIG_HOME/scripts/bin"(N-/)
+    "${KREW_ROOT:-$HOME/.krew}/bin"(N-/)
     "$path[@]"
 )
 
@@ -30,10 +35,11 @@ fpath=(
 )
 
 ### history ###
-export HISTFILE="$XDG_STATE_HOME/zsh_history"
+export HISTFILE="$XDG_STATE_HOME/.zsh_history"
 export HISTSIZE=12000
 export SAVEHIST=10000
 
+setopt SHARE_HISTORY
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt GLOBDOTS
@@ -67,7 +73,7 @@ zinit wait lucid null for \
     @'zdharma-continuum/null'
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ytakaya/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ytakaya/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/yamazoe/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yamazoe/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ytakaya/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ytakaya/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/yamazoe/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yamazoe/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
