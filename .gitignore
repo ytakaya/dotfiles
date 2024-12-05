@@ -1,2 +1,4 @@
 .zcompdump
 .zshrc.backup
+.zsh_history
+.zsh_sessions/

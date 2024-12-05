@@ -39,21 +39,21 @@ config.keys = {
       mods = "CTRL",
     },
   },
-  {
-    key = "d",
-    mods = "CTRL",
-    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
-  },
-  {
-    key = "v",
-    mods = "CTRL",
-    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
-  },
-  {
-    key = "x",
-    mods = "CTRL",
-    action = wezterm.action.CloseCurrentPane { confirm = true }
-  },
+  -- {
+  --   key = "d",
+  --   mods = "CTRL",
+  --   action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
+  -- },
+  -- {
+  --   key = "v",
+  --   mods = "CTRL",
+  --   action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
+  -- },
+  -- {
+  --   key = "x",
+  --   mods = "CTRL",
+  --   action = wezterm.action.CloseCurrentPane { confirm = true }
+  -- },
   {
     key = "LeftArrow",
     mods = "CTRL|SHIFT",
